@@ -1,0 +1,19 @@
+{
+    "validation": {
+        "rule": "required|min:5",
+        "messages": {
+            "required": "O campo nome é obrigatório.",
+            "min": "O campo nome deve possuir no minimo 5 letras."
+        }
+    }
+}
+
+{
+    "validation": {
+        "rule": "required",
+        "messages": {
+            "required": "O campo título é obrigatório.",
+            
+        }
+    }
+}
