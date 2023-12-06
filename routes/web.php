@@ -14,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //busca todos os registros da tabela artistas
+    $artistas = App\Models\Artista::all();
+    return view('welcome',compact('artistas'));
 })->name('welcome');
 
 Route::get('/palestras', function () {
