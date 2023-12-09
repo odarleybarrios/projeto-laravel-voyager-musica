@@ -19,6 +19,12 @@ Route::get('/', function () {
     return view('welcome',compact('artistas'));
 })->name('welcome');
 
+Route::get('/artista/{id}', function ($id) {
+    //busca todos os registros da tabela artistas com oid = $id
+    $artista = App\Models\Artista::find($id);
+    return view('artistas.show',compact('artista'));
+})->name('artista.show');
+
 Route::get('/palestras', function () {
    $titulo = 'Palestras';
    //buscar todos os registros da tabela posts
