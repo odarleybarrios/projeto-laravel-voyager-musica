@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNav">
     <div class="container">
         <a class="navbar-brand" href="{{url('/#page-top')}}">
-            <i class="fa-solid fa-shuttle-space"></i> {{env('APP_NAME')}}
+            <i class="fa-solid fa-headphones"></i> {{env('APP_NAME')}}
 
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,8 +10,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('welcome')}}">Artistas</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('musicas')}}">Musicas</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('playlists')}}">Playlists</a></li>
                 <!-- Authentication Links -->
                 @includeIf('componentes.menu.item.login')
             </ul>

@@ -16,4 +16,10 @@ class Playlist extends Model
 
         return parent::save();
     }
+        public function musicas()
+        {
+            return $this->belongsToMany(Musica::class,'musica_playlist','musica_id','id')
+            ->orderBy('created_at', 'DESC');
+        }
+
 }
